@@ -1,0 +1,46 @@
+./configure \
+--prefix=/usr/local/php \
+--with-config-file-path=/usr/local/php/etc \
+--with-config-file-scan-dir=/usr/local/php/etc/php \
+--disable-rpath \
+--with-iconv-dir=/usr/local \
+--with-gd \
+--enable-gd-native-ttf \
+--with-freetype-dir \
+--with-jpeg-dir \
+--with-png-dir \
+--enable-exif \
+--with-freetype-dir \
+--with-zlib \
+--enable-xml \
+--with-libxml-dir=/usr \
+--enable-mysqlnd \
+--with-pdo-mysql=mysqlnd \
+--with-mysqli=mysqlnd \
+--with-curl \
+--with-recode \
+--enable-fpm \
+--enable-bcmath \
+--enable-inline-optimization \
+--enable-mbregex \
+--enable-mbstring \
+--with-mcrypt \
+--with-mhash \
+--with-openssl \
+--enable-sockets \
+--with-xmlrpc \
+--enable-soap \
+--enable-calendar \
+--enable-ftp \
+--enable-zip \
+--enable-pcntl \
+--enable-sysvmsg \
+--enable-sysvsem \
+--enable-sysvshm \
+--enable-opcache \
+--enable-maintainer-zts
+
+centos7会报错
+configure: error: Can not find recode.h anywhere under yes /usr/local /usr /opt.
+yum install recode-devel -y 即可
+ubuntu/debian上的包名不同，自行百度
